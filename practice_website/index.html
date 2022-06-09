@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <meta charset="UTF-8">
+        <title>My First Webpage</title>
+    </head>
+    
+    <body>
+        <h1>This is the main header.</h1>
+        <p>This is the first line of text in the website.</p>
+        <h2>This is an h2 heading.</h2>
+        <p>This is the second line of text in the website.</p>
+        <h3>This is an h3 heading.</h3>
+        <p>Headings can go from h1 to h6 in terms of importance.</p>
+
+        <h1>Bold and Italic text</h1>
+        <p>Here is some <strong>bold</strong> and <em>italic</em> text!</p>
+        <!-- This is an html comment. Strong is used for bold and em is used for italic in html -->
+        <!-- I can also use <strong><em> to make text bold AND italic </strong></em> -->
+        <!-- we can use <b> and <i> but it won't add meaning to text readers for accessibility DO NOT USE -->
+
+        <h1>Making Lists!</h1>
+        <!-- This is an unordered list using <ul> and lists as bullet points. <li> is used to list each item-->
+        <ul>
+            <li>Banana</li>
+            <li>Orange</li>
+            <li>Apple</li>
+        </ul>
+        <!-- An ordered list uses <ol> and will list with numbers -->
+        <ol>
+            <li>Banana</li>
+            <li>Orange</li>
+            <li>Apple</li>
+        </ol>
+        <!-- We can use start='int' to specify where an <ol> should start counting from -->
+        <!-- <ol reversed> lists in reverse order. <li value = 'int'> will change that items list value and subsequent values counting up -->
+        <dl>
+            <dt>Banana</dt>
+            <dd>Is a long yellow fruit with lots of potassium!</dd>
+            <dt>Orange</dt>
+            <dd>Is a cirtus fruit named after it's color.</dd>
+            <dt>Apple</dt>
+            <dd>Is a red or green fruit thats chewy and delicious.</dd>
+        </dl>
+        <!-- This is a description list using <dl> with <dt> for title element and <dd> for description element -->
+
+        <h1>Making Links.</h1>
+        <h3>Homepage</h3>
+            <a href = "https://www.theodinproject.com/about">click me</a>
+            <!-- This is a hypertext link using an anchor <a> and href =  to link to a website, picture or other document. MAKE SURE TO INCLUDE HTTP OR HTTPS when linking externally -->
+            <a href = "./Pages/about.html">About</a>
+            <!-- This is an relative link on the same website and assumes the domain name is the same -->
+            <!-- If the file is in a different directory we need to include ./ then the folder locations to the file. The ./ means look relative to current directory-->
+        
+        <h1>Using Images</h1>
+        <img src="./images/dog.jpg" alt="Dog Image">
+        <!-- Using <img> to put images on a webpage. We do not need </img> on this code! We can also use an aboluste path like a website to link to images online -->
+        <!-- We can also start an image location with .. if we need to go 'up one step' in the directories to enter a different folder -->
+        <!-- alt is used to give the picture a name for text readers and if the website wont load properly. MUST INCLUDE -->
+    </body>
+</html>
