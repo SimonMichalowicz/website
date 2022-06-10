@@ -7,6 +7,8 @@
 <body>
     <h1>My first website learning</h1>
     <p></p>
+    <p><strong>This is a page where I practice new techniques as I learn them so the rest of the site can be structured better so please excuse the mess!</strong></p>
+
         <h1>This is the main header.</h1>
         <p>This is the first line of text in the website.</p>
         <h2>This is an h2 heading.</h2>
@@ -59,11 +61,30 @@
         <!-- Using <img> to put images on a webpage. We do not need </img> on this code! We can also use an aboluste path like a website to link to images online -->
         <!-- We can also start an image location with .. if we need to go 'up one step' in the directories to enter a different folder -->
         <!-- alt is used to give the picture a name for text readers and if the website wont load properly. MUST INCLUDE -->
+        <!-- CSS note: we can adjust an image height and width with img {height: ***px width: ***px} or use auto instead of px count.-->
+        <!-- IMPORTANT we should use auto for height and adjust width manually to avoid proportion loss-->
+        
+        
+    <!-- Selectors-->
+    <!-- Selectors are a part of CSS code that select HTML code that CSS rules apply to-->
+    <!-- * is the symbol for universal and every element would have the rule applied in a * {   } selector.-->
+    <!-- An element selector will apply the rules to all types of that element e.g. <p>{  } would apply to all <p> elements -->
+    <!-- Class selectors apply the rule to all items of the given class (a class is an attribute we assign). Class selectors are a period followed by the name of the class e.g. .class{  }-->
+    <!-- ID selectors should be used sparingly. Unlike class selectors they can only have ONE ID. ID selectors are a # followed by the ID e.g. #thisid {   }-->
+    <!-- We can put multiple selectors with the same declartions together then seperate below e.g. .read, .unread { same  } .read { .read unique } .unread { .unread unique }-->
+        
+    <!-- We can set color with color and background color then use color: rgb(set 3 values) or use a keyword like red -->
+    <!-- font-family can be used to set preferences for fonts (use "" if whitespace is in the font name) start with a specific font first and widely generic last -->
+    <!-- font-size: **px will set font size. font-weight: 1-1000 will select boldness. text-align: will align text to a value set e.g. center or left-->
+    <h2>CSS practice area</h2>         
+        
+        
         <h4>Links</h4>
             <p><a href = ../../index.html >Home</a></p>
             <p><a href = ./about.html>About</a></p>
             <p><a href = ./learning.html>My Learning</a></p>
             <p><a href = ./exercise.html>Current Exercise</a></p>
             <p><a href = ./history.html >History</a></p>
+
 </body>
 </html>

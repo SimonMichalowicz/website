@@ -1,0 +1,13 @@
+html {
+    background-color: rgb(17, 16, 16);
+    }
+
+body {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.856);
+    }
+h1 {
+    text-align:center;
+    font-size: 72px;
+    font-family: Arial, Helvetica, sans-serif
+    }
