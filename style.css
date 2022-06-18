@@ -1,6 +1,10 @@
 html {
+    box-sizing: border-box;
     background-color: rgb(17, 16, 16);
     }
+*, *::before, *::after{
+    box-sizing: inherit;
+}
 
 body {
     color: rgb(255, 255, 255);
@@ -21,10 +25,22 @@ a{
     color: red;
 }
 .main{
+    display: flex;
+    justify-content:center;
+    border: 4px solid rgba(211, 211, 211, 0.479);
+    margin: auto 200px;
+    padding: 8px 16px;
     font-size: 24px;
     text-align: center;
 }
 .link{
+    justify-content: space-evenly;
+    border: 4px solid rgba(211, 211, 211, 0.479);
+    padding: 8px 16px;
     font-size: 24px;
     text-align: center;
+}
+.spacing{
+    display: flex;
+    justify-content: space-evenly;
 }
