@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    font-size: 24px;
+    padding: 8px 12px;
+}
+
+.buttonLayout {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 0px;
+    background-color: aqua;
+}

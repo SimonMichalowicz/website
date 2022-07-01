@@ -7,22 +7,35 @@
 <body>
   <script>
     // Your JavaScript goes here!
-    console.log("Hello, World!")
-    console.log(10+10)
-    console.log(10+10+10+10+10+10)
-    console.log((4 + 6 + 9) / 77)
-    let a = 10
-    console.log(9 * a)
-    let b = 7 * a
-    console.log(b)
 
-    const max = 57
-    actual = max - 13
-    percentage = actual / max
+    function add7(num) {
+        
+        return num + 7
+    }
+console.log(add7(10))
 
-    
-    
-  </script>
+    function multiply(a, b) {
+        
+        return a * b
+}
+
+console.log(multiply(7, 10))
+
+
+    function capatilize(string){
+        
+        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+
+    }
+console.log(capatilize('gOOdBye'))
+
+    function lastletter(word){
+
+        return word.charAt(word.length - 1);
+    }
+console.log(lastletter('Hello'))
+
+</script>
   <h4>Links</h4>
   <a href="./jsindex.html">Javascript Index</a>
 </body>
