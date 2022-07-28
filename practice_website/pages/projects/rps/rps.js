@@ -29,10 +29,10 @@ function playRound(playerSelection) {
 
     let computerSelection = computerPlay();
     let result = '';
-
+    document.getElementById('roundResult').style.visibility='visible';
     if((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'rock')) { 
         playerScore += 1;
-        result = "You win! " + playerSelection + " beats " + computerSelection + "!";
+        result = "You win! " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1) + " beats " + computerSelection + "!";
 
         if (playerScore == 5) {
         result = "You win with " + playerScore + " points!";
@@ -46,7 +46,7 @@ function playRound(playerSelection) {
 
     else{
         computerScore += 1;
-        result = "You lose! " + computerSelection + " beats " + playerSelection + "!";
+        result = "You lose! " + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1) + " beats " + playerSelection + "!";
         
         if(computerScore == 5) {
         result = "You lose! The computer scored " + computerScore + " points!";
@@ -60,6 +60,8 @@ function playRound(playerSelection) {
 }   //Function to take player selection and compare with computer selection to determine who gets a point
 
 document.getElementById('resetButton').style.visibility='hidden'; //hide reset button on page load
+
+document.getElementById('roundResult').style.visibility='hidden';
 
 playerSelection.forEach (button => 
     {button.addEventListener('click', () => {playRound(button.value)})}) //play round on each button press

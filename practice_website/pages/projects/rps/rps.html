@@ -2,20 +2,23 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Rock Paper Scissor (Console)</title>
+  <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="rps.css">
 </head>
 <body>
-<div class="buttonLayout">
-  <input type="button" value="rock" id="rockButton">
-  <input type="button" value="paper" id="paperButton">
-  <input type="button" value="scissors" id="scissorsButton">
+<div class="main">
+  <h1>Rock Paper Scissors</h1>
+  <p>First to 5 points wins!</p>
+  <div class="buttonLayout">
+    <input type="button" value="rock" id="rockButton" alt="rock">
+    <input type="button" value="paper" id="paperButton" alt="paper">
+    <input type="button" value="scissors" id="scissorsButton" alt="scissors">
+  </div>
+  <div class="results">
+    <div id="roundResult"></div>
+    <input type="button" value="Play Again?" id="resetButton">
+  </div>
 </div>
-
-<div id="roundResult"></div>
-
-<input type="button" value="Play Again?" id="resetButton">
-
   <script src="rps.js"> </script>
 </body>
 </html>
