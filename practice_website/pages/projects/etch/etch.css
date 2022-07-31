@@ -1,0 +1,36 @@
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: skyblue;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    max-width: 484px;
+    border: solid black 2px;
+    background-color: white;
+}
+
+.row {
+    display: block;
+}
+
+.cell {
+    margin: 0px;
+    border: solid black 2px;
+    min-height: 30px;
+    min-width: 30px;
+}
