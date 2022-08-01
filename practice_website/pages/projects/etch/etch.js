@@ -1,47 +1,75 @@
-const container = document.querySelector(".grid");
-const resetGrid = document.querySelector('#resetButton')
-let row = prompt("Please enter a value: ");
-let column = row;
+const container = document.querySelector("#container");
+const resetGrid = document.querySelector('#resetButton');
+const black = document.querySelector('#black');
+const eraser = document.querySelector('#eraser');
+const rainbow = document.querySelector('#rainbow');
 
-function makeGrid(gridSize, columnSize) {
-    for (let i = 0; i < gridSize; i++) {
-        const fullRow = document.createElement('div');
-        fullRow.classList.add('row');
-        container.appendChild(fullRow);  //adding a row each time a full row is looped
-        for (let j = 0; j < columnSize; j++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            fullRow.appendChild(cell);
-        }//adding cells one at a time to a row
+let cell;
+let target;
+
+function makeGrid(rowSize, columnSize) {
+    container.style.setProperty('--numRows', rowSize); //set CSS grid property sizes
+    container.style.setProperty('--numCols', columnSize);
+    for (let i = 0; i < rowSize; i++)  {
+        makeCell(columnSize);
     }
-
 }//function to make a grid
 
-function changeColor(cellColor){
-    
-    cellColor.style.backgroundColor="black";
+function makeCell(cellNum) {
+    for (let j = 0; j < cellNum; j++) {
+        cell = document.createElement('div');
+        cell.classList.add('cell');
+        container.appendChild(cell);
+    }
+}//function to make cells and attach to container 
 
+function blackink() {
+    container.addEventListener('mouseover', function(e) {
+        target=e.target 
+            if (target.matches("div.cell")) {
+                target.style.backgroundColor="black";
+        }
+    });
 }//function to set a cells background color
+
+function erase() {
+    container.addEventListener('mouseover', function(e) {
+        target=e.target 
+            if (target.matches("div.cell")) {
+                target.style.backgroundColor="white";
+        }
+    });
+}
 
 function reset(){
     while (container.firstChild) {
         container.removeChild(container.lastChild)
     }
-    row = prompt("Please enter a value: ");
-    column = row;
-    makeGrid(row, column)
-}
+    
+    let userNum = prompt("Please enter a value between 1 and 100: ");
+        while (userNum < 1 || userNum > 100 || isNaN(userNum)) {
+            userNum = prompt("Please enter a value between 1-100: "); //set conditions on grid size and prevent NaN
+        }
+    makeGrid(userNum, userNum)
+}//reset function
 
-makeGrid(row, column); //Create grid on page load
-
-container.addEventListener('mouseover', function(e) {
-    target=e.target 
-    if (target.matches("div.cell")) {
-        changeColor(target);
-    }
-}); //Listen for mouseover and rung changeColor function if cell is highlighted.
+reset();
 
 resetGrid.addEventListener('click', () => {reset()});
+
+black.addEventListener('change', (e) => {
+    if(e.target.checked) {
+        blackink();
+    }
+});
+
+eraser.addEventListener('change', (e) => {
+    if(e.target.checked) {
+        erase();
+    }
+});
+
+
 
 
 //create 'container' of grid in html --DONE
@@ -51,13 +79,16 @@ resetGrid.addEventListener('click', () => {reset()});
 //cell to be styled with border to seperate - no margin
     //cell borders to be equal on all sides--DONE
 
-//have color be hightlighted on click and drag (on click works on drag?)
-//adjust color to black
-//reset button to clear to default value
+//have color be hightlighted on click and drag (on click works on drag?)-- DONE
+//adjust color to black --DONE
+//reset button to clear to default value -- DONE
 
-//once basic grid in place take user input to determine size of grid
-//user input set to x in space of 16
-//set limit of 1-100 to prevent excessive input, error message and request new input
+//once basic grid in place take user input to determine size of grid --DONE
+//user input set to x in space of 16 --DONE
+//set limit of 1-100 to prevent excessive input, error message and request new input --DONE
+
+//Grid to stay same size regardless of value entered--done
+
 
 //change color input to rainbow (keep code for black)
 //cycle through rgb color

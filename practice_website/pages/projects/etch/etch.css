@@ -6,31 +6,35 @@ html {
     box-sizing: border-box;
 }
 
-body {
-    background-color: skyblue;
-}
-
-.container {
+#outerbox {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 650px;
+    width: 650px;
+    background-color: red;
 }
 
-.grid {
-    display: flex;
+#container {
+    display: grid;
     justify-content: center;
-    max-width: 484px;
-    border: solid black 2px;
+    margin: auto;
+    grid-template-columns:  repeat(var(--numCols), 1fr);
+    grid-template-rows:  repeat(var(--numRows), 1fr);
     background-color: white;
-}
-
-.row {
-    display: block;
+    width: 550px;
+    height: 550px;
+    border: solid 2px black;
 }
 
 .cell {
-    margin: 0px;
-    border: solid black 2px;
-    min-height: 30px;
-    min-width: 30px;
+display: flex;
+padding: 0px;
+}
+
+:root {
+    --grid-numCols: 1;
+    --grid-numRows: 1;
 }

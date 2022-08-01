@@ -6,7 +6,8 @@ const newGame = document.querySelector('#resetButton');
 function computerPlay(){
     let option = ['rock', 'paper', 'scissors']
     let choice = option[Math.floor(Math.random()*option.length)]
-    return choice
+    return choicecd
+
 }       //function to determine computer selection using randomizer to pick from option array
 
 function gameOver(){
