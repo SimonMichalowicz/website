@@ -8,18 +8,20 @@
 
 <body>
     <h1>Etch-a-Sketch</h1>
-        <div id="outerbox">
-            <div id="container"></div>
+        <div id="container">
+            <div id="grid"></div>
         </div>
         <div class="controls">
-            <input type="button" value="Reset" id="resetButton">
-            <div class="checkboxs">
-                <input type="radio" value="black" id="black" name="tool">
-                <label for="black"> Black </label>
-                <input type="radio" value="eraser" id="eraser" name="tool">
-                <label for="eraser"> Eraser </label>
-                <input type="radio" value="rainbow" id="rainbow" name="tool">
-                <label for="rainbow"> Rainbow </label>
+            <div class="controlLayout">
+                <input type="button" value="Reset" id="resetButton">
+                <div class="checkboxes">
+                    <input type="radio" value="black" id="black" name="tool">
+                    <label for="black"> Black </label>
+                    <input type="radio" value="eraser" id="eraser" name="tool">
+                    <label for="eraser"> Eraser </label>
+                    <input type="radio" value="rainbow" id="rainbow" name="tool">
+                    <label for="rainbow"> Rainbow </label>
+                </div>
             </div>
         </div>
 

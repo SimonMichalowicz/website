@@ -1,10 +1,9 @@
-const container = document.querySelector("#container");
+const container = document.querySelector("#grid");
 const resetGrid = document.querySelector('#resetButton');
 const black = document.querySelector('#black');
 const eraser = document.querySelector('#eraser');
 const rainbow = document.querySelector('#rainbow');
 
-let cell;
 let target;
 
 function makeGrid(rowSize, columnSize) {
@@ -13,15 +12,15 @@ function makeGrid(rowSize, columnSize) {
     for (let i = 0; i < rowSize; i++)  {
         makeCell(columnSize);
     }
-}//function to make a grid
+}//function to make a grid looping over makeCell function
 
 function makeCell(cellNum) {
     for (let j = 0; j < cellNum; j++) {
-        cell = document.createElement('div');
+        let cell = document.createElement('div');
         cell.classList.add('cell');
         container.appendChild(cell);
     }
-}//function to make cells and attach to container 
+}//function to make cells and attach to container.
 
 function blackink() {
     container.addEventListener('mouseover', function(e) {
@@ -30,7 +29,7 @@ function blackink() {
                 target.style.backgroundColor="black";
         }
     });
-}//function to set a cells background color
+}//set background color on hover on cells to black
 
 function erase() {
     container.addEventListener('mouseover', function(e) {
@@ -39,35 +38,57 @@ function erase() {
                 target.style.backgroundColor="white";
         }
     });
-}
+}//set background color on hover on cells to white
+
+function rainbowInk() {
+    container.addEventListener('mouseover', function(e) {
+        target=e.target 
+            if (target.matches("div.cell")) {
+                target.style.backgroundColor=rgb();
+        }
+    });
+
+}//set background color on hover on cells to random color
+
+function rgb() {
+    let rgbColor = ['red', 'orange', 'yellow', 'green', 'blue', 'pink', 'purple', 'brown'];
+    let rgbRandom = rgbColor[Math.floor(Math.random()*rgbColor.length)];
+    return rgbRandom;
+}//pull random color from array and return color.
 
 function reset(){
     while (container.firstChild) {
-        container.removeChild(container.lastChild)
-    }
+        container.removeChild(container.lastChild);
+    } //remove old grid by removing all cell divs to keep site clean
     
-    let userNum = prompt("Please enter a value between 1 and 100: ");
+    let userNum = 16 //prompt("Please enter a value between 1 and 100: ");
         while (userNum < 1 || userNum > 100 || isNaN(userNum)) {
             userNum = prompt("Please enter a value between 1-100: "); //set conditions on grid size and prevent NaN
         }
     makeGrid(userNum, userNum)
-}//reset function
+}//reset to make a new grid.
 
-reset();
+reset(); //prompt user on page launch
 
-resetGrid.addEventListener('click', () => {reset()});
+resetGrid.addEventListener('click', () => {reset()}); //user enabled reset
 
 black.addEventListener('change', (e) => {
     if(e.target.checked) {
         blackink();
     }
-});
+}); //enable black ink
 
 eraser.addEventListener('change', (e) => {
     if(e.target.checked) {
         erase();
     }
-});
+}); //enable eraser
+
+rainbow.addEventListener('change', (e) => {
+    if(e.target.checked) {
+        rainbowInk();
+    }
+}); //enable rgb ink
 
 
 
@@ -90,6 +111,6 @@ eraser.addEventListener('change', (e) => {
 //Grid to stay same size regardless of value entered--done
 
 
-//change color input to rainbow (keep code for black)
-//cycle through rgb color
-//add GUI to make selection via button or checkbox
+//change color input to rainbow (keep code for black) --DONE
+//cycle through rgb color --DONE
+//add GUI to make selection via button or checkbox --DONE
