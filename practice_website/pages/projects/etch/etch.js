@@ -61,7 +61,7 @@ function reset(){
         container.removeChild(container.lastChild);
     } //remove old grid by removing all cell divs to keep site clean
     
-    let userNum = 16 //prompt("Please enter a value between 1 and 100: ");
+    let userNum = prompt("Please enter a value between 1 and 100: ");
         while (userNum < 1 || userNum > 100 || isNaN(userNum)) {
             userNum = prompt("Please enter a value between 1-100: "); //set conditions on grid size and prevent NaN
         }
