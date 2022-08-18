@@ -6,4 +6,96 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(../../../img/math.jpg);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    font-style: italic;
+    text-shadow: 2px 2px white;
+}
+
+#calcContainer {
+    margin: 100px 750px;
+    border: black solid;
+    border-radius: 15px;
+    padding: 50px;
+    background: linear-gradient(45deg, white, grey);
+    height: 550px;
+    width: 400px;
+    box-shadow: 3px 3px black;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    background-color: aqua;
+    margin-bottom: 20px;
+    font-size: 30px;
+    height: 90px;
+    box-shadow: 1px 1px black;
+    border-radius: 3px;
+}
+    #displayLower, #displayUpper {
+        padding: 5px 10px;  
+    }
+
+#calcButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#clear, #delete {
+    color: white;
+    border-radius: 15px;
+    height: 50px;
+    width: 140px;
+    font-size: 30px;
+    box-shadow: 2px 2px black;
+}
+
+
+    #clear {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: orange;
+    }
+
+    #delete {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        background-color: pink;
+    }
+
+.numerical, .operator, .equals {
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 2px 2px black;
+    color: white;
+}
+
+    #zero {background-color: red;}
+    #decimal {background-color: blue;}
+    #equals {background-color: green;}
+    #plus {background-color: purple;}
+    #one {background-color: orange;}
+    #two {background-color: pink;}
+    #three {background-color: red;}
+    #minus {background-color: blue;}
+    #four {background-color: green;}
+    #five {background-color: purple;}
+    #six {background-color: orange;}
+    #times {background-color: pink;}
+    #seven {background-color: red;}
+    #eight {background-color: blue;}
+    #nine {background-color: green;}
+    #division {background-color: purple;}
 /* Calculator contains 18 buttons. Set up as 5x4 grid scale 1 buttons with AC and DEL set to scale 2 */
