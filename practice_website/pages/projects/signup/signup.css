@@ -1,0 +1,10 @@
+*, *::before, *::after{ box-sizing: inherit;}
+
+html {box-sizing: border-box;}
+.main{display: flex;}
+    .mainLeft{
+        background-image: url(../../../img/man-2179243_1920.jpg);
+        background-size: cover;
+        background-position: center;
+        min-width: 40vw;
+    }

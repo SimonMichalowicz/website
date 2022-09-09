@@ -1,0 +1,22 @@
+thead, th {
+    font-size: 3rem;
+}
+
+td {
+    font-size: 2rem;
+}
+
+p {
+    letter-spacing: .5em;
+    line-height: 2;
+}
+
+/*use psudo class valid and invalid to set css depending on validation */
+
+input:valid {
+    border: green 2px solid;
+}
+
+input:invalid {
+    border: red 2px solid;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice page</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+    <table>
+        <caption>A practice table</caption> <!-- Accessibility option -->
+        <colgroup>
+            <col span="4">
+            <col style="background-color: yellow;">
+        </colgroup>
+        <thead>
+            <tr>
+            <td></td>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Previous Role</th>
+            <th scope="col">Current Role</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Candidate 1</th>
+            <td>Jeff</td>
+            <td>20</td>
+            <td colspan="2">This role is the previous and current</td>
+        </tr>
+        <tr>
+            <th scope="row">Candidate 2</th>
+            <td>Chelsea</td>
+            <td>30</td>
+            <td>Chef</td>
+            <td>Porter</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Assessment</th>
+                <td colspan="2"></td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+        </tfoot>
+    </table>
+
+<!--Use rem for font sizes and px for everything else to help with scaling-->
+
+<p>Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Labore soluta odio rerum. Corporis neque, dolorum quia quos modi consequuntur fugit et, ducimus odio asperiores, minus repellendus officia optio obcaecati mollitia?</p>
+
+<main class="parent">
+    <div class="child group1">
+      <div class="grand-child group1"></div>
+    </div>
+    <div class="child group2">
+      <div class="grand-child group2"></div>
+    </div>
+    <div class="child group3">
+      <div class="grand-child group3"></div>
+    </div>
+  </main>
+
+<!-- In CSS use > to select child (main > div { SOME CSS })-->
+<!-- Use + to select same child (.group1 + div { SOME CSS}) will only select group2-->
+<!-- Use  ~ to select all of the siblings (.group1 ~ div { SOME CSS }) will select group1, 2 and 3-->
+
+
+<!-- Use -- to set a variable in CSS, specify name and use - instead of spaces e.g --main-color-text: red; --> 
+<!-- use var(--"variablename") to call the variable, can include a second condition as fallback e.g var(--variable-color, red)-->
+  
+<!-- FORMS  -->
+<!-- method GET to retreive something from the site such as searching-->
+<!-- method POST when we want to change something on the site such as making a new account-->
+<form action="example.com/example" method="post">   <!-- Action is where form to be sent, method is the HTTP request method-->
+    <fieldset> <legend>Form Entry</legend> <!-- Legen sets a heading for the form MUST be after fieldset opening tag-->
+    <label for="first_name">First name:</label>
+    <input type="text" id="first_name" placeholder="Bob..." name="first_name"> <!-- name is required, used as a variable for the backend-->
+
+    <label for="user_email">Email Address:</label>
+    <input type="email" id="user_email" name="email" placeholder="you@example.com">
+    </fieldset> <!-- fieldset groups inputs together-->
+
+    <label for="user_password">Password:</label>
+    <input type="password" id="user_password" name="password" required> <!-- required used to set an entry as required-->
+    
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" minlength="3" maxlength="10"> <!-- minlength and maxlength to limit text inputs use min and max to limit numerical inputs-->
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <!-- button types must be within the form-->
+    <button type="submit">Submit Here</button>
+    <button type="reset">Reset</button>
+    <!-- any other buttons must specify the type or they will submit by default-->
+</form>
+
+<form action="example.com" method="post">
+    <select name="Car">
+        <option value="mercedes">Mercedes</option>  <!-- all options MUST have a value-->
+        <option value="tesla" selected>Tesla</option>        <!-- we can select defaut value with selected-->
+        <option value="volvo">Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="mini">Mini</option>
+        <option value="ford">Ford</option>
+      </select>
+</form>
+
+<select name="fashion">
+    <optgroup label="Clothing">
+      <option value="t_shirt">T-Shirts</option>
+      <option value="sweater">Sweaters</option>
+      <option value="coats">Coats</option>
+    </optgroup>
+    <optgroup label="Foot Wear">
+      <option value="sneakers">Sneakers</option>
+      <option value="boots">Boots</option>
+      <option value="sandals">Sandals</option>
+    </optgroup>
+  </select>
+
+<!-- Use regular expressions with the 'pattern' validation to set limits on things like zip code entry. e.g. pattern='(\d{5}([\-]\d{4})?)'
+can also use title to edit the error message when a validation isnt met-->
+
+
+
+</body>
+</html>
