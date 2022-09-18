@@ -1,10 +1,85 @@
 *, *::before, *::after{ box-sizing: inherit;}
 
-html {box-sizing: border-box;}
-.main{display: flex;}
+html {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+body {
+    margin: 0px;
+}
+.main{
+    display: flex;
+}
     .mainLeft{
-        background-image: url(../../../img/man-2179243_1920.jpg);
+        background-image: url(../../../img/bicycle-1851497_1920.jpg);
         background-size: cover;
         background-position: center;
-        min-width: 40vw;
+        position: absolute;
+        width: 40vw;
+        height: 100vh;
+    }
+
+    .bannerLeft {
+        display: flex;
+        background-color: rgba(128, 128, 128, 0.651);
+        position: absolute;
+        width: 100%;
+        height: 20vh;
+        top: 20%;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(12px, 2.5rem, 30vw);
+        text-shadow: grey 2px 2px;
+        white-space: no-wrap;
+    }
+
+    .imgCredit {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: white;
+        text-shadow: black 2px 2px;
+    }
+
+    a {
+        color: white;
+        text-shadow: black 2px 2px;
+        text-decoration: none;
+    }
+
+    .mainRight {
+        position: absolute;
+        background-color: rgb(224, 224, 224);
+        right: 0%;
+        width: 60vw;
+        height: 100vh;
+        padding: 0 2vw;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    fieldset {
+        background-color: white;
+    }
+    legend {
+        position: absolute;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 2;
+    }
+
+    input {
+        
     }
