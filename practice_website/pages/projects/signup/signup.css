@@ -16,7 +16,7 @@ body {
         background-position: center;
         position: absolute;
         width: 40vw;
-        height: 100vh;
+        height: 100%;
     }
 
     .bannerLeft {
@@ -64,22 +64,52 @@ body {
     }
     h2 {
         font-size: 1.5rem;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-bottom: 50px;
     }
     fieldset {
         background-color: white;
+        box-shadow: black 0px 1px;
+        border-radius: 15px;
     }
     legend {
         position: absolute;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: bold;
+        padding-left: 20px;
+        padding-top: 10px;
     }
 
     .gridContainer {
         display: grid;
-        grid-template-columns: 2;
-        grid-template-rows: 2;
+        grid-template-columns: 200px 200px;
+        row-gap: 5px;
+        column-gap: 100px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+    }
+    input {
+        max-width: 200px;
+    }
+    input:valid {
+        border-color: green;
     }
 
-    input {
-        
+    input:invalid {
+        border-color: red;
+    }
+
+    button {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        background-color: lightblue;
+        font-size: 1.2rem;
+    }
+
+    #lowerText {
+        padding-left: 20px;
     }
