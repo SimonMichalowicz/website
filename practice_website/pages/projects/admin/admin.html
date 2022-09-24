@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebarContainer"> 
+                 <div class="navigation">
+                    <img id="dash" src="./images/aperture.svg" alt="Dashboard"> <h1>Dashboard</h1>
+                    <img class="navimg" src="./images/home.svg" alt="Home"> <p class="nav">Home</p>
+                    <img class="navimg" src="./images/user.svg" alt="Profile"> <p class="nav">Profile</p>
+                    <img class="navimg" src="./images/mail.svg" alt="Messages"> <p class="nav">Messages</p>
+                    <img class="navimg" src="./images/clock.svg" alt="History"> <p class="nav">History</p>
+                    <img class="navimg" src="./images/layers.svg" alt="Tasks"> <p class="nav">Tasks</p>
+                    <img class="navimg" src="./images/smile.svg" alt="Communities"> <p class="nav" id="comm">Communities</p>
+                    <img class="navimg" src="./images/settings.svg" alt="Settings"> <p class="nav">Settings</p>
+                    <img class="navimg" src="./images/terminal.svg" alt="Settings"> <p class="nav">Support</p>
+                    <img class="navimg" src="./images/eye.svg" alt="Settings"> <p class="nav">Privacy</p>
+                 </div>
+        </div>
+    </div>
+    <div class="vertContainer">
+        <header>
+                <img id="searchimg" src="./images/search.svg" alt="Search Icon">
+                <label for="searchBar">Search Bar</label>
+                <input type="search" id="searchBar" placeholder="Search..." name="q">
+                <img id="alertimg" src="./images/bell.svg" alt="Bell Icon">
+                <img id="profilepic2" src="./images/user-297330_640.png" alt="Profile picture">
+                <p id="topText">Morgan Oakley</p>
+                
+                <img id="profilepicMain" src="./images/user-297330_640.png" alt="Profile picture">
+                <div id="welcome"><p id="hi">Hi there,</p>
+                <p id="bottomText">Morgan Oakley (@morgan)</p></div>
+                <button id="newButton">New</button>
+                <button id="uploadButton">Upload</button>
+                <button id="shareButton">Share</button>
+        </header>
+        <div class="mainContainer">
+            <div class="article">Article 1</div>
+            <div class="article"> Article 2</div>
+            <div class="article">Article 3</div>
+            <div class="article">Article 4</div>
+            <div class="article"> Article 5</div>
+            <div class="article"> Article 6</div>
+            <div class="announcement">Announcement</div>
+            <div class="trending">Trending</div>
+        </div>
+        <footer>Created by Simon Michalowicz for The Odin Project</footer>
+    </div>
+</div>
+    <script src="admin.js"></script>
+</body>
+</html>
