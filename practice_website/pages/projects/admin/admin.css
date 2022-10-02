@@ -12,8 +12,10 @@ body {
 
 .container {
     display: flex;
-    width: 100%;
+    width: 100;
+    height: 100;
     margin: 0;
+    background-color: #eee;
 }
 
 .vertContainer{
@@ -32,10 +34,12 @@ label {
     position: absolute;
 }
 
+/* sidebar settings */
+
 .sidebar {
     background-color: orange;
     width: 300px;
-    height: 100vh;
+    height: 100;
 }
 
     .sidebarContainer {
@@ -84,14 +88,18 @@ header {
     column-gap: 10px;
     row-gap: 0px;
     width: 100%;
-    height: 180px; 
+    height: 180px;
+    padding: 20px 0px;
+    background-color: white;
+    position: relative;
+    box-shadow: 2px 2px #888888;
 }
 
 /* Top row of header */
 
     #searchimg {
         grid-area: sicon;
-        justify-self: center;
+        justify-self: end;
         align-self: center;
     }
 
@@ -116,6 +124,7 @@ header {
         align-self: center;
         height: 60px;
         border: orange solid 3px;
+        background-color: orange;
         border-radius: 50%;
         padding: 2px;
     }
@@ -136,6 +145,7 @@ header {
         justify-self: end;
         align-self: center;
         border: orange solid 3px;
+        background-color: orange;
         border-radius: 50%;
         padding: 4px;
     }
@@ -171,23 +181,142 @@ header {
         align-self: center;
     }
 
+/* Your project and Announcement headers (forgot to include in orginal grid layout */
+
+.titles {
+    display: grid;
+    grid-template-columns: 0.67fr 0.33fr;
+    justify-items: start;
+    padding: 0px 15px;
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+    #announce {
+        grid-column-start: 2;
+        padding: 0px 20px;
+    }
+
+/* Articles section */
+
 .mainContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 0.67fr 0.33fr;
     background-color: #eee;
+    height: 100%;
 }
+    .articleContainer {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        row-gap: 25px;
+        column-gap: 25px; 
+        padding: 0px 15px;
+        padding-bottom: 25px;
+    }
 
     .article {
-        height: 20vh;
-        width: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: white;
+        border-left: blue solid 10px; 
+        box-shadow: 5px 5px lightgray;
+        border-radius: 15px;
+        padding: 10px 35px;
     }
+
+    .article h3 {
+        margin-bottom: 0;
+        margin-top: 35px;
+    }
+
+    .article p {
+        margin-top: 0;
+    }
+
+    .articleIcons {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        gap: 40px;
+        padding-bottom: 20px;
+    }
+
+/* Announcement and Trending sections */
+
+.announce_trending_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.10fr 1fr;
+    column-gap: 25px;
+    padding: 0px 15px;
+    padding-bottom: 25px;
+}
 
     .announcement {
-        grid-column-start: 3;
-        grid-row-start: 1;
+        display: grid;
     }
 
-    .trending {
-        grid-column-start: 3;
-        grid-row-start: 2;
+    h5 {
+        font-size: 1rem;
+        border-top: #888888 1px solid;
+        padding-top: 15px;
+        margin: 5px;
     }
+
+    .announcement p {
+        margin: 5px;
+    }
+
+    #first_announcement {
+        border-top: none;
+        padding-top: 25px;
+    }
+
+    .announcement, .trending {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 35px;
+        box-shadow: 5px 5px lightgray;
+    }
+
+    #trending {
+        padding: 10px 0px;
+        font-size: 1.3rem;
+   }
+
+.trending {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.trending img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: orange;
+    justify-self: center;
+    align-self: center;
+}
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .user h6 {
+        font-size: 1rem;
+    }
+
+    .user p, .user h6 {
+        margin: 2px;
+    }
+
+/* Credit at bottom of page */
+
+footer {
+    display: flex;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+}
